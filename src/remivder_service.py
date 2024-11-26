@@ -26,7 +26,9 @@ def send_start_reminders():
     # Send a reminder for each booking
     for booking in bookings:
         id, user_id, _, _, start_time, end_time = booking
-        bot.send_message(chat_id=user_id, text=f"Напоминание: Твоя стирка начнется в {start_time}")
+        bot.send_message(chat_id=user_id, text=f"یادآوری: جلسه مصاحبه شما شما در ساعت {start_time} شروع می‌شود. 💻لینک جلسه مصاحبه خدمت شما
+https://portal.iranscratch.ir/Branch/Portal/BigBlueButton/S/4121
+آکادمی ایران اسکرچ")
 
     conn.close()
 
@@ -42,7 +44,7 @@ def send_end_reminders():
     
     for booking in bookings:
         id, user_id, _, _, start_time, end_time = booking
-        bot.send_message(chat_id=user_id, text=f"Твоя стирка закончилась в {end_time}")
+        bot.send_message(chat_id=user_id, text=f"جلسه مصاحبه شما در ساعت {end_time} به پایان رسید.")
 
     conn.close()
 
