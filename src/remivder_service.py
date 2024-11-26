@@ -8,7 +8,7 @@ from telegram import Bot
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-bot = Bot(token='KEY')
+bot = Bot(token='7970389791:AAF4Hx-pM0xX1GmllgY_Qizk0VrLjFp5sQE')
 
 # Function to send start reminders
 def send_start_reminders():
