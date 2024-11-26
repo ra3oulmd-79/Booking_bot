@@ -55,11 +55,14 @@ def start(update: Update, context: CallbackContext) -> None:
 
 # Helper function to generate the next 7 days
 def generate_dates():
-    # Set the locale to Russian
+    # Set the locale to Iran
     try:
-        locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
-    except locale.Error:
-        print("The desired locale is not supported on your system.")
+    locale.setlocale(locale.LC_TIME, 'fa_IR.UTF-8')
+except locale.Error:
+    print("The desired locale is not supported on your system.")
+    
+local_tz = pytz.timezone('Asia/Tehran')
+
     
     dates = [datetime.now() + timedelta(days=i) for i in range(7)]
     return [date.strftime('%d.%m.%Y (%A)') for date in dates]
